@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var questionSize = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +52,11 @@ class ViewController: UIViewController {
     }
     
     func askQuestion(action: UIAlertAction! = nil) {
+        questionSize += 1
+        guard questionSize <= 10 else {
+            final()
+            return
+        }
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
         
@@ -59,8 +65,17 @@ class ViewController: UIViewController {
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
         title = countries[correctAnswer].uppercased()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score: \(score)", style: .plain, target: .none, action: .none)
+        
     }
 
+    func final(){
+        let ac = UIAlertController(title: "Final", message: "Your score is \(score)", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Retry", style: .default, handler: askQuestion))
+        present(ac, animated: true)
+        score = 0
+        questionSize = 0
+    }
 
     @IBAction func buttonTapped(_ sender: UIButton) {
         var title: String
@@ -69,7 +84,7 @@ class ViewController: UIViewController {
             title = "Correct"
             score += 1
         }else {
-            title = "Wrong"
+            title = "Wrong!. That's the flag of \(countries[sender.tag].uppercased()) "
             score -= 1
         }
         

@@ -9,3 +9,4 @@ This repo contains projects from [100DaysOfSwift](https://www.hackingwithswift.c
 | [Project6](https://github.com/deryacayiroglu/100DaysOfSwift/tree/main/Project6) |
 | ------------- |
 | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project6.png" /> |
+| <ul><li>Visual Formatting <br> Language </li><li>Anchors</li></ul> |

@@ -6,7 +6,7 @@ This repo contains projects from [100DaysOfSwift](https://www.hackingwithswift.c
 | ------------- | ------------- | ------------- | ------------- |
 | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project1.gif" /> | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project2.gif" /> | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project4.gif" /> | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project5.gif" /> |
 
-| [Project6](https://github.com/deryacayiroglu/100DaysOfSwift/tree/main/Project6) |
-| ------------- |
-| <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project6.png" /> |
-| <ul><li>Visual Formatting <br> Language </li><li>Anchors</li></ul> |
+| [Project6](https://github.com/deryacayiroglu/100DaysOfSwift/tree/main/Project6) | [ShoppingList](https://github.com/deryacayiroglu/100DaysOfSwift/tree/main/ShoppingList) |
+| ------------- | ------------- |
+| <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project6.png" /> | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/ShoppingList.gif" /> |
+| <ul><li>Visual Formatting <br> Language </li><li>Anchors</li></ul> | <ul><li>UITableview<br>Controller</li><li>UIAlertController</li><li>TextField</li><li>ToolBar</li></ul> |

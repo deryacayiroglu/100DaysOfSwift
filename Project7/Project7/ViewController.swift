@@ -10,11 +10,13 @@ import UIKit
 class ViewController: UITableViewController {
 
     var petitions = [Petition]()
+    var filteredPetitions = [Petition]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(showCredits))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(showFilterAlert))
         
         let urlString: String
         
@@ -31,6 +33,35 @@ class ViewController: UITableViewController {
             }
         }
         showError()
+    }
+    
+    @objc func showFilterAlert() {
+        let ac = UIAlertController(title: "Filter By", message: nil, preferredStyle: .alert)
+        ac.addTextField()
+        
+        let submitAction = UIAlertAction(title: "Submit", style: .default) {
+            [weak self, weak ac] action in
+            guard let filterBy = ac?.textFields?[0].text else { return }
+            self?.submit(filterBy)
+        }
+        
+        ac.addAction(submitAction)
+        present(ac, animated: true)
+    }
+    
+    func submit(_ filterBy: String) {
+        let lowerFilter = filterBy.lowercased()
+        if filterBy.isEmpty{
+            filteredPetitions = petitions
+        }else {
+            filteredPetitions.removeAll()
+            for petition in petitions {
+                if petition.title.lowercased().contains(lowerFilter){
+                    filteredPetitions.append(petition)
+                }
+            }
+        }
+        tableView.reloadData()
     }
     
     @objc func showCredits() {
@@ -50,17 +81,18 @@ class ViewController: UITableViewController {
         
         if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
             petitions = jsonPetitions.results
+            filteredPetitions = petitions
             tableView.reloadData()
         }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return petitions.count
+        return filteredPetitions.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let petiton = petitions[indexPath.row]
+        let petiton = filteredPetitions[indexPath.row]
         cell.textLabel?.text = petiton.title
         cell.detailTextLabel?.text = petiton.body
         return cell
@@ -68,7 +100,7 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()
-        vc.detailItem = petitions[indexPath.row]
+        vc.detailItem = filteredPetitions[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 

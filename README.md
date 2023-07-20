@@ -10,3 +10,8 @@ This repo contains projects from [100DaysOfSwift](https://www.hackingwithswift.c
 | ------------- | ------------- | ------------- | ------------- |
 | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project6.png" /> | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/ShoppingList.gif" /> | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project7.gif" /> |  <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project8.gif" /> |
 | <ul><li>Visual Formatting <br> Language </li><li>Anchors</li></ul> | <ul><li>UITableview<br>Controller</li><li>UIAlertController</li><li>TextField</li><li>ToolBar</li></ul> | <ul><li>Codable</li><li>JSONDecoder</li><li>UITabBar<br>Controller</li></ul> | <ul><li>ProgrammaticUI</li><li>addTarget</li><li>enumareted</li></ul> |
+
+| [Project10](https://github.com/deryacayiroglu/100DaysOfSwift/tree/main/Project10) |
+| ------------- |
+| <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project10.gif" /> |
+| <ul><li>CollectionView</li><li>ImagePicker <br> Controller</li></ul> |

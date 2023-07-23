@@ -31,6 +31,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     let balls = ["ballBlue", "ballCyan", "ballGreen", "ballGrey", "ballPurple", "ballRed", "ballYellow"]
     
+    var ballCountLabel: SKLabelNode!
+    
+    var ballCount = 5{
+        didSet{
+            if ballCountLabel.text == "Game Over"{
+                            ballCount = 5
+            }
+            ballCountLabel.text = "Number of Ball: \(ballCount)"
+        }
+    }
+    
     override func didMove(to view: SKView) {
        let background = SKSpriteNode(imageNamed: "background")
         background.position = CGPoint(x: 512, y: 384)
@@ -49,6 +60,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         editLabel.horizontalAlignmentMode = .left
         editLabel.position = CGPoint(x: 70, y: 700)
         addChild(editLabel)
+        
+        ballCountLabel = SKLabelNode(fontNamed: "Chalkduster")
+        ballCountLabel.text = "Number of ball: 5"
+        ballCountLabel.fontColor = .red
+        ballCountLabel.horizontalAlignmentMode = .center
+        ballCountLabel.position = CGPoint(x: 512, y: 700)
+        addChild(ballCountLabel)
                 
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         physicsWorld.contactDelegate = self
@@ -137,11 +155,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if object.name == "good" {
             destroy(ball: ball)
             score += 1
+            ballCount += 1
         } else if object.name == "bad" {
             destroy(ball: ball)
             score -= 1
+            ballCount -= 1
+            if ballCount == 0 {
+                gameOver()
+            }
         }
     }
+    
+    func gameOver(){
+            ballCountLabel.text = "Game Over"
+            score = 0
+            
+            for node in self.children {
+                if node.name == "box"{
+                    node.removeFromParent()
+                }
+            }
+        }
     
     func destroy(ball: SKNode) {
         if let fireParticles = SKEmitterNode(fileNamed: "FireParticles") {

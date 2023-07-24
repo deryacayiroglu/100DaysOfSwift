@@ -14,4 +14,4 @@ This repo contains projects from [100DaysOfSwift](https://www.hackingwithswift.c
 | [Project10](https://github.com/deryacayiroglu/100DaysOfSwift/tree/main/Project10) | [Project11](https://github.com/deryacayiroglu/100DaysOfSwift/tree/main/Project11) |
 | ------------- | ------------- |
 | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project10.gif" /> | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project11.gif" /> |
-| <ul><li>CollectionView</li><li>ImagePicker <br> Controller</li></ul> | <ul><li>SpriteKit</li><li>Physics</li><li>SKAkction</li></ul> |
+| <ul><li>CollectionView</li><li>ImagePicker <br> Controller</li><li>UserDefaults</li><li>NSCoding</li></ul> | <ul><li>SpriteKit</li><li>Physics</li><li>SKAkction</li></ul> |

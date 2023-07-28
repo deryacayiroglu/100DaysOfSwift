@@ -46,8 +46,8 @@
                                     <action selector="intensityChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="0bA-Un-tau"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xed-PY-ryt">
-                                <rect key="frame" x="20" y="632" width="130" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xed-PY-ryt">
+                                <rect key="frame" x="20" y="632" width="140" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="QCr-IX-Omb"/>
                                 </constraints>
@@ -91,6 +91,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="wvW-DQ-q8I"/>
                     <connections>
+                        <outlet property="filterButton" destination="Xed-PY-ryt" id="CV1-WL-22b"/>
                         <outlet property="imageView" destination="aYk-kl-y8T" id="mF8-R1-h8U"/>
                         <outlet property="intensity" destination="7II-Ki-0Uf" id="lMe-eG-xVx"/>
                     </connections>

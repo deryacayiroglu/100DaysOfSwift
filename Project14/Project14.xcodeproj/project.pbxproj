@@ -14,6 +14,8 @@
 		868146C02A753E3900331D9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868146BE2A753E3900331D9B /* Main.storyboard */; };
 		868146C22A753E3A00331D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868146C12A753E3A00331D9B /* Assets.xcassets */; };
 		868146C52A753E3A00331D9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868146C32A753E3A00331D9B /* LaunchScreen.storyboard */; };
+		868146CD2A753FCE00331D9B /* whackBad.caf in Resources */ = {isa = PBXBuildFile; fileRef = 868146CB2A753FCE00331D9B /* whackBad.caf */; };
+		868146CE2A753FCE00331D9B /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 868146CC2A753FCE00331D9B /* whack.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		868146BF2A753E3900331D9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		868146C12A753E3A00331D9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		868146C42A753E3A00331D9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		868146CB2A753FCE00331D9B /* whackBad.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whackBad.caf; sourceTree = "<group>"; };
+		868146CC2A753FCE00331D9B /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				868146BE2A753E3900331D9B /* Main.storyboard */,
 				868146C12A753E3A00331D9B /* Assets.xcassets */,
 				868146C32A753E3A00331D9B /* LaunchScreen.storyboard */,
+				868146CC2A753FCE00331D9B /* whack.caf */,
+				868146CB2A753FCE00331D9B /* whackBad.caf */,
 			);
 			path = Project14;
 			sourceTree = "<group>";
@@ -126,10 +132,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				868146CD2A753FCE00331D9B /* whackBad.caf in Resources */,
 				868146C02A753E3900331D9B /* Main.storyboard in Resources */,
 				868146B72A753E3900331D9B /* GameScene.sks in Resources */,
 				868146C22A753E3A00331D9B /* Assets.xcassets in Resources */,
 				868146C52A753E3A00331D9B /* LaunchScreen.storyboard in Resources */,
+				868146CE2A753FCE00331D9B /* whack.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@ import SpriteKit
 class GameScene: SKScene {
     var slots = [WhackSlot]()
     var gameScore: SKLabelNode!
+    var finalScore: SKLabelNode!
     
     var popuptime = 0.85
     
@@ -91,6 +92,15 @@ class GameScene: SKScene {
             gameOver.position = CGPoint(x: 512, y: 384)
             gameOver.zPosition = 1
             addChild(gameOver)
+            
+            finalScore = SKLabelNode(fontNamed: "Chalkduster")
+            finalScore.text = "Final Score : \(score)"
+            finalScore.position = CGPoint(x: 512, y: 480)
+            finalScore.zPosition = 1
+            finalScore.fontColor = .red
+            finalScore.fontSize = 46
+            addChild(finalScore)
+            
             return
         }
         popuptime *= 0.991

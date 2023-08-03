@@ -13,6 +13,7 @@
 		869A94CB2A7BDE18001A2070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869A94C92A7BDE18001A2070 /* Main.storyboard */; };
 		869A94CD2A7BDE19001A2070 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 869A94CC2A7BDE19001A2070 /* Assets.xcassets */; };
 		869A94D02A7BDE19001A2070 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869A94CE2A7BDE19001A2070 /* LaunchScreen.storyboard */; };
+		869A94D82A7BE028001A2070 /* Capital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869A94D72A7BE028001A2070 /* Capital.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		869A94CC2A7BDE19001A2070 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		869A94CF2A7BDE19001A2070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		869A94D12A7BDE19001A2070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		869A94D72A7BE028001A2070 /* Capital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capital.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				869A94C32A7BDE18001A2070 /* AppDelegate.swift */,
 				869A94C52A7BDE18001A2070 /* SceneDelegate.swift */,
 				869A94C72A7BDE18001A2070 /* ViewController.swift */,
+				869A94D72A7BE028001A2070 /* Capital.swift */,
 				869A94C92A7BDE18001A2070 /* Main.storyboard */,
 				869A94CC2A7BDE19001A2070 /* Assets.xcassets */,
 				869A94CE2A7BDE19001A2070 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				869A94C82A7BDE18001A2070 /* ViewController.swift in Sources */,
 				869A94C42A7BDE18001A2070 /* AppDelegate.swift in Sources */,
+				869A94D82A7BE028001A2070 /* Capital.swift in Sources */,
 				869A94C62A7BDE18001A2070 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,11 +16,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var gameTimer: Timer?
     var isGameOver = false
     
+    var timeInterval: TimeInterval = 1
+    var enemyNumber = 0
+    
     var score = 0 {
         didSet {
             scoreLabel.text = "Score: \(score)"
         }
     }
+    
+    var gameOverLabel: SKLabelNode!
     
     override func didMove(to view: SKView) {
         backgroundColor = .black
@@ -47,11 +52,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.gravity = .zero
         physicsWorld.contactDelegate = self
         
-        gameTimer = Timer.scheduledTimer(timeInterval: 0.35, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
+        gameTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
     }
     
     @objc func createEnemy() {
         guard let enemy = possibleEnemies.randomElement() else { return }
+        enemyNumber += 1
         
         let sprite = SKSpriteNode(imageNamed: enemy)
         sprite.position = CGPoint(x: 1200, y: Int.random(in: 50...736))
@@ -63,6 +69,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         sprite.physicsBody?.angularVelocity = 5
         sprite.physicsBody?.linearDamping = 0
         sprite.physicsBody?.angularDamping = 0
+        
+        if enemyNumber >= 20 {
+            enemyNumber = 0
+            timeInterval -= 0.1
+            gameTimer?.invalidate()
+            gameTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -90,13 +103,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.position = location
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard !isGameOver else { return }
+        gameOver()
+    }
+    
     func didBegin(_ contact: SKPhysicsContact) {
+        gameOver()
+    }
+    
+    func gameOver() {
         let explosion = SKEmitterNode(fileNamed: "explosion")!
         explosion.position = player.position
         addChild(explosion)
         
         player.removeFromParent()
+        gameTimer?.invalidate()
         isGameOver = true
         
+        gameOverLabel = SKLabelNode(fontNamed: "Chalkduster")
+        gameOverLabel.text = "GAME OVER"
+        gameOverLabel.fontSize = 55
+        gameOverLabel.position = CGPoint(x: 512, y: 384)
+        gameOverLabel.fontColor = .red
+        gameOverLabel.zPosition = 1
+        addChild(gameOverLabel)
     }
 }

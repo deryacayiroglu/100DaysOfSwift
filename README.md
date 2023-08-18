@@ -21,7 +21,7 @@ This repo contains projects from [100DaysOfSwift](https://www.hackingwithswift.c
 | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project14.gif" /> | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project15.gif" /> | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project16.gif" /> |
 | <ul><li>SKSpriteKit</li><li>SKAction</li><li>SKTexture</li><li>SKCropNode</li></ul> | <ul><li>CGAffineTransform</li><li>animate(withDuration:)</li><li>Spring animations</li></ul> | <ul><li>MapKit</li><li>MapView</li><li>PinAnnotationView</li></ul> |
 
-| [Project17](https://github.com/deryacayiroglu/100DaysOfSwift/tree/main/Project17) | [Project19](https://github.com/deryacayiroglu/100DaysOfSwift/tree/main/Project19) |
-| ------------- | ------------- |
-| <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project17.gif" /> | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project19.gif" /> |
-| <ul><li>SKSpriteKit</li><li>Timer</li></ul> | <ul><li>Extension</li></ul> |
+| [Project17](https://github.com/deryacayiroglu/100DaysOfSwift/tree/main/Project17) | [Project19](https://github.com/deryacayiroglu/100DaysOfSwift/tree/main/Project19) | [Project20](https://github.com/deryacayiroglu/100DaysOfSwift/tree/main/Project20) |
+| ------------- | ------------- | ------------- |
+| <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project17.gif" /> | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project19.gif" /> | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project20.gif" /> |
+| <ul><li>SKSpriteKit</li><li>Timer</li></ul> | <ul><li>Extension</li></ul> | <ul><li>Shake Gesture</li><li>UIBezierPath</li></ul> |

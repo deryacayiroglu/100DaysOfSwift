@@ -16,11 +16,15 @@ class GameScene: SKScene {
     let bottomEdge = -22
     let rightEdge = 1024 + 22
     
+    var scoreLabel: SKLabelNode!
+    
     var score = 0 {
         didSet {
-            //code
+            scoreLabel.text = "Score: \(score)"
         }
     }
+    
+    var launchCount = 0
     
     override func didMove(to view: SKView) {
         let background = SKSpriteNode(imageNamed: "background")
@@ -28,6 +32,13 @@ class GameScene: SKScene {
         background.blendMode = .replace
         background.zPosition = -1
         addChild(background)
+        
+        scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+        scoreLabel.text = "Score: \(score)"
+        scoreLabel.fontSize = 40
+        scoreLabel.position = CGPoint(x: 10, y: 15)
+        scoreLabel.horizontalAlignmentMode = .left
+        addChild(scoreLabel)
         
         gameTimer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(launchFireworks), userInfo: nil, repeats: true)
     }
@@ -68,6 +79,11 @@ class GameScene: SKScene {
     }
     
     @objc func launchFireworks() {
+        launchCount += 1
+        if launchCount == 5 {
+            gameTimer?.invalidate()
+        }
+            
         let movementAmount: CGFloat = 1800
         
         switch Int.random(in: 0...3) {
@@ -102,6 +118,7 @@ class GameScene: SKScene {
         default:
             break
         }
+        
     }
     
     func checkTouches(_ touches: Set<UITouch>) {

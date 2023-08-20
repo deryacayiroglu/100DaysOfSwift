@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UNUserNotificationCenterDelegate {
     
-    var timeInterval = 5.0
+    var timeInterval: TimeInterval = 5
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +84,7 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
                 showAlert(title: "Show", message: "The user tapped our \"show more info…\" button")
             case "delay":
                 showAlert(title: "Remind Me Later", message: "The user tapped our \"Remind me later...\" button")
-                timeInterval = 5
+                timeInterval = 3600 * 24
                 scheduleLocal()
             default:
                 break

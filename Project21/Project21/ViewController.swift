@@ -9,6 +9,8 @@ import UserNotifications
 import UIKit
 
 class ViewController: UIViewController, UNUserNotificationCenterDelegate {
+    
+    var timeInterval = 5.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +49,7 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         dateComponents.minute = 30
         //let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         center.add(request)
@@ -58,7 +60,8 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         center.delegate = self
         
         let show = UNNotificationAction(identifier: "show", title: "Tell me more", options: .foreground)
-        let category = UNNotificationCategory(identifier: "alarm", actions: [show], intentIdentifiers: [])
+        let delay = UNNotificationAction(identifier: "delay", title: "Remind me later")
+        let category = UNNotificationCategory(identifier: "alarm", actions: [show, delay], intentIdentifiers: [])
         
         center.setNotificationCategories([category])
     }
@@ -73,11 +76,16 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
             case UNNotificationDefaultActionIdentifier:
                 // the user swiped to unlock
                 print("Default identifier")
+                showAlert(title: "Default Identifier", message: "The user swiped to unlock")
                 
             case "show":
                 // the user tapped our "show more info…" button
                 print("Show more information…")
-                
+                showAlert(title: "Show", message: "The user tapped our \"show more info…\" button")
+            case "delay":
+                showAlert(title: "Remind Me Later", message: "The user tapped our \"Remind me later...\" button")
+                timeInterval = 5
+                scheduleLocal()
             default:
                 break
             }
@@ -85,6 +93,12 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         
         // you must call the completion handler when you're done
         completionHandler()
+    }
+    
+    func showAlert(title: String?, message: String?) {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
     }
 }
 

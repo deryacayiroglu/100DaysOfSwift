@@ -25,3 +25,8 @@ This repo contains projects from [100DaysOfSwift](https://www.hackingwithswift.c
 | ------------- | ------------- | ------------- |
 | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project17.gif" /> | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project19.gif" /> | <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project20.gif" /> |
 | <ul><li>SKSpriteKit</li><li>Timer</li></ul> | <ul><li>Extension</li></ul> | <ul><li>Shake Gesture</li><li>UIBezierPath</li></ul> |
+
+| [Project21](https://github.com/deryacayiroglu/100DaysOfSwift/tree/main/Project21) |
+| ------------- |
+| <img height= "340"  src="https://github.com/deryacayiroglu/100DaysOfSwift/blob/main/Screen/Project21.gif" /> |
+| <ul><li>UserNotification</li></ul> |

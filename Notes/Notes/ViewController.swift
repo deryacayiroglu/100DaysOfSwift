@@ -19,6 +19,7 @@ class ViewController: UITableViewController {
         
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let add = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addNote))
+        add.tintColor = .systemOrange
         toolbarItems = [spacer, add]
         navigationController?.isToolbarHidden = false
         
@@ -35,7 +36,12 @@ class ViewController: UITableViewController {
     }
     
     @objc func addNote() {
+        let newNote = Note(title: "", body: "")
+        notes.insert(newNote, at: 0)
+        tableView.reloadData()
+        
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            vc.delegate = self
             navigationController?.pushViewController(vc, animated: true)
         }
     }

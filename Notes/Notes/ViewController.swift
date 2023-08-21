@@ -32,11 +32,13 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Note", for: indexPath)
         cell.detailTextLabel?.text = notes[indexPath.row].body
+        cell.textLabel?.text = notes[indexPath.row].title
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         return cell
     }
     
     @objc func addNote() {
-        let newNote = Note(title: "", body: "")
+        let newNote = Note(title: "New Note", body: "")
         notes.insert(newNote, at: 0)
         tableView.reloadData()
         

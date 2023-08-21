@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a7F-0l-f6L">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -52,6 +53,39 @@
             </objects>
             <point key="canvasLocation" x="885.50724637681162" y="5.3571428571428568"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="HAJ-8e-U5Y">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="uQ5-K7-jR4" customClass="DetailViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YUb-fd-JKh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello World" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4kz-XO-Rbg">
+                                <rect key="frame" x="20" y="48" width="374" height="814"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SRl-aC-aBu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4kz-XO-Rbg" firstAttribute="trailing" secondItem="YUb-fd-JKh" secondAttribute="trailingMargin" id="5Hw-M9-7Za"/>
+                            <constraint firstItem="4kz-XO-Rbg" firstAttribute="leading" secondItem="YUb-fd-JKh" secondAttribute="leadingMargin" id="5Xg-0C-hRV"/>
+                            <constraint firstItem="4kz-XO-Rbg" firstAttribute="top" secondItem="SRl-aC-aBu" secondAttribute="top" id="EvL-7T-78I"/>
+                            <constraint firstItem="4kz-XO-Rbg" firstAttribute="bottom" secondItem="SRl-aC-aBu" secondAttribute="bottom" id="xGb-ko-X1E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="text" destination="4kz-XO-Rbg" id="27N-VR-qUT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QGH-wr-IRo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1731.8840579710147" y="16.741071428571427"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="moo-AD-6kM">
             <objects>
@@ -72,6 +106,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -13,6 +13,8 @@
 		86733DB42A9398CD00B954AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86733DB22A9398CD00B954AE /* Main.storyboard */; };
 		86733DB62A9398CE00B954AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86733DB52A9398CE00B954AE /* Assets.xcassets */; };
 		86733DB92A9398CE00B954AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86733DB72A9398CE00B954AE /* LaunchScreen.storyboard */; };
+		86733DC12A93A2B700B954AE /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86733DC02A93A2B700B954AE /* Note.swift */; };
+		86733DC32A93A96F00B954AE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86733DC22A93A96F00B954AE /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		86733DB52A9398CE00B954AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86733DB82A9398CE00B954AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86733DBA2A9398CE00B954AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86733DC02A93A2B700B954AE /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		86733DC22A93A96F00B954AE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				86733DB52A9398CE00B954AE /* Assets.xcassets */,
 				86733DB72A9398CE00B954AE /* LaunchScreen.storyboard */,
 				86733DBA2A9398CE00B954AE /* Info.plist */,
+				86733DC02A93A2B700B954AE /* Note.swift */,
+				86733DC22A93A96F00B954AE /* DetailViewController.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			files = (
 				86733DB12A9398CD00B954AE /* ViewController.swift in Sources */,
 				86733DAD2A9398CD00B954AE /* AppDelegate.swift in Sources */,
+				86733DC32A93A96F00B954AE /* DetailViewController.swift in Sources */,
 				86733DAF2A9398CD00B954AE /* SceneDelegate.swift in Sources */,
+				86733DC12A93A2B700B954AE /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

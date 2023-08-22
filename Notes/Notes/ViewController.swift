@@ -24,6 +24,11 @@ class ViewController: UITableViewController {
         navigationController?.isToolbarHidden = false
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        notes = DataManager.load()
+        tableView.reloadData()
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notes.count
@@ -38,12 +43,18 @@ class ViewController: UITableViewController {
     }
     
     @objc func addNote() {
-        let newNote = Note(title: "New Note", body: "")
-        notes.insert(newNote, at: 0)
-        tableView.reloadData()
-        
+        openDetailView(info: "NewNote", noteIndex: 0)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        openDetailView(info: "update", noteIndex: indexPath.row)
+    }
+    
+    func openDetailView(info: String, noteIndex: Int) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
-            vc.delegate = self
+            vc.noteIndex = noteIndex
+            vc.notes = self.notes
+            vc.info = info
             navigationController?.pushViewController(vc, animated: true)
         }
     }

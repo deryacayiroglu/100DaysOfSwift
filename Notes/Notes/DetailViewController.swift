@@ -10,11 +10,12 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
-    var delegate: ViewController!
     
+    var notes: [Note]!
     var noteTitle: String!
     var noteBody: String!
     var noteIndex: Int!
+    var info: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +26,25 @@ class DetailViewController: UIViewController {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
+        if info == "update" {
+            textView.text = notes[noteIndex].body
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        if let text = textView.text{
+        if let text = textView.text, !text.isEmpty{
             let lineArr = text.split(separator: "\n")
             guard !lineArr.isEmpty else { return }
-            delegate.notes[0].title = String(lineArr[0])
-            delegate.notes[0].body = lineArr.joined(separator: " ")
-            delegate.tableView.reloadData()
+            noteTitle = String(lineArr[0])
+            noteBody = lineArr.joined(separator: " ")
+            let newNote = Note(title: noteTitle, body: noteBody)
+            if info == "NewNote" {
+                notes.insert(newNote, at: noteIndex)
+            } else {
+                notes[noteIndex] = newNote
+            }
+            DataManager.save(notes)
         }
     }
     

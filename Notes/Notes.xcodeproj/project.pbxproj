@@ -15,6 +15,8 @@
 		86733DB92A9398CE00B954AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86733DB72A9398CE00B954AE /* LaunchScreen.storyboard */; };
 		86733DC12A93A2B700B954AE /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86733DC02A93A2B700B954AE /* Note.swift */; };
 		86733DC32A93A96F00B954AE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86733DC22A93A96F00B954AE /* DetailViewController.swift */; };
+		8681436F2A953542000EBCB5 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8681436E2A953542000EBCB5 /* FileManager.swift */; };
+		868143712A953561000EBCB5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868143702A953561000EBCB5 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		86733DBA2A9398CE00B954AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86733DC02A93A2B700B954AE /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		86733DC22A93A96F00B954AE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8681436E2A953542000EBCB5 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		868143702A953561000EBCB5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				86733DB72A9398CE00B954AE /* LaunchScreen.storyboard */,
 				86733DBA2A9398CE00B954AE /* Info.plist */,
 				86733DC02A93A2B700B954AE /* Note.swift */,
+				8681436E2A953542000EBCB5 /* FileManager.swift */,
+				868143702A953561000EBCB5 /* DataManager.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -147,6 +153,8 @@
 				86733DB12A9398CD00B954AE /* ViewController.swift in Sources */,
 				86733DAD2A9398CD00B954AE /* AppDelegate.swift in Sources */,
 				86733DC32A93A96F00B954AE /* DetailViewController.swift in Sources */,
+				868143712A953561000EBCB5 /* DataManager.swift in Sources */,
+				8681436F2A953542000EBCB5 /* FileManager.swift in Sources */,
 				86733DAF2A9398CD00B954AE /* SceneDelegate.swift in Sources */,
 				86733DC12A93A2B700B954AE /* Note.swift in Sources */,
 			);

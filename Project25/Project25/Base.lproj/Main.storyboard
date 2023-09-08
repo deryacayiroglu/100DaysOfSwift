@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QXt-UM-vwm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1d3-Wv-Hax">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1d3-Wv-Hax">
                             <size key="itemSize" width="145" height="145"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -30,15 +31,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1000" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9i6-Ya-TbW">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1000" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yv9-LJ-vWd">
                                             <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="9i6-Ya-TbW" firstAttribute="top" secondItem="CFl-Xy-g9m" secondAttribute="top" id="KNz-3O-mbM"/>
-                                        <constraint firstItem="9i6-Ya-TbW" firstAttribute="centerX" secondItem="CFl-Xy-g9m" secondAttribute="centerX" id="VoI-a3-gpT"/>
-                                        <constraint firstItem="9i6-Ya-TbW" firstAttribute="leading" secondItem="CFl-Xy-g9m" secondAttribute="leading" id="YcV-3L-k95"/>
-                                        <constraint firstItem="9i6-Ya-TbW" firstAttribute="centerY" secondItem="CFl-Xy-g9m" secondAttribute="centerY" id="wnD-fr-uB4"/>
+                                        <constraint firstItem="yv9-LJ-vWd" firstAttribute="centerX" secondItem="CFl-Xy-g9m" secondAttribute="centerX" id="6YC-u1-T7p"/>
+                                        <constraint firstItem="yv9-LJ-vWd" firstAttribute="centerY" secondItem="CFl-Xy-g9m" secondAttribute="centerY" id="BhG-8K-mrY"/>
+                                        <constraint firstItem="yv9-LJ-vWd" firstAttribute="top" secondItem="CFl-Xy-g9m" secondAttribute="top" id="W3f-IB-m1D"/>
+                                        <constraint firstItem="yv9-LJ-vWd" firstAttribute="leading" secondItem="CFl-Xy-g9m" secondAttribute="leading" id="Zap-78-art"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                             </collectionViewCell>
